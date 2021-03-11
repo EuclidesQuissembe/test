@@ -18,9 +18,6 @@ jobs:
         with:
           php-version: "7.4"
 
-      - name: 🚧 Installing Dependencies
-        uses: "ramsey/composer-install@v1"
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
@@ -28,3 +25,10 @@ jobs:
           username: epiz_27447670
           password: ZMPsHnWZuC
           server-dir: "htdocs/"
+          exclude: .git*
+            - .git/*
+            - .github/
+            - composer.lock
+
+      - name: 🚧 Installing Dependencies
+        uses: "ramsey/composer-install@v1"
