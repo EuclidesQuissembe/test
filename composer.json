@@ -10,5 +10,5 @@
         "php": "^7.4",
         "coffeecode/router": "^1.0.7"
     },
-    "vendor-dir": "./"
+    "vendor-dir": "./htdocs"
 }
