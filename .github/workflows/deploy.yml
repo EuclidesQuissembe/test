@@ -25,10 +25,6 @@ jobs:
           username: epiz_27447670
           password: ZMPsHnWZuC
           server-dir: "htdocs/"
-          exclude: .git*
-            - .git/*
-            - .github/
-            - composer.lock
 
       - name: 🚧 Installing Dependencies
         uses: "ramsey/composer-install@v1"
