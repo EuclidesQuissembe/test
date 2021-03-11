@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v4.0.0
+        uses: actions/checkout@v2.3.2
 
       - name: 🔨 Setup PHP Version
         uses: "shivammathur/setup-php@v2"
@@ -22,7 +22,7 @@ jobs:
         uses: "ramsey/composer-install@v1"
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftpupload.net
           username: epiz_27447670
