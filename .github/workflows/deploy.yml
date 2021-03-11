@@ -10,5 +10,20 @@ jobs:
     name: "Deploy"
     runs-on: ubuntu-latest
     steps:
-      - name: Get latest code
+      - name: 🚚 Get latest code
         uses: actions/checkout@v2.3.2
+
+      - name: 🔨 Setup PHP Version
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "7.4"
+
+      - name: 🚧 Installing Dependencies
+        uses: "ramsey/composer-install@v1"
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftpupload.net:21/htdocs
+          ftp-username: epiz_27447670
+          ftp-password: ZMPsHnWZuC
